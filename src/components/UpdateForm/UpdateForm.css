@@ -1,0 +1,12 @@
+label {
+  display: block;
+  margin: 10px 0;
+}
+
+input {
+  margin: 0 5px;
+}
+
+.poemText {
+  min-width: 25em; 
+}

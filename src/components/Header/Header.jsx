@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
-      <h1>Poegram Mailer</h1>
+      <h1>Poegram Updater</h1>
     </header>
   );
 };

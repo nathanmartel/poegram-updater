@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { getPoegrams } from '../../selectors/poegramSelector';
 import Poegram from './Poegram';
+import './PoegramList.css';
 
 export const PoegramList = () => {
 

@@ -20,7 +20,7 @@
 .poegram {
   width: 512px;
   height: 256px;
-  margin: 10px;
+  /* margin: 10px; */
   display: inline-block;
   color: rgba(255,255,255,0.33);
   text-align: center;
