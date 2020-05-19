@@ -1,22 +1,26 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { getPoegrams } from '../../selectors/poegrams';
+import { getPoegrams } from '../../selectors/poegramSelector';
 import Poegram from './Poegram';
 
 export const PoegramList = () => {
 
   const poegrams = useSelector(getPoegrams);
 
-  const poegramElements = () => poegrams.map(poegram => (
+  const poegramElements = poegrams.map(poegram => (
     <li key={poegram._id}>
       <Poegram poegram={poegram} />
     </li> 
   ));
 
   return (
-    <ul>
-      {poegramElements}
-    </ul>
+    <>
+      {poegrams.length > 0 &&
+        <ul>
+          {poegramElements}
+        </ul>
+      }
+    </>
   );
 };
 

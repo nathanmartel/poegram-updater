@@ -1,18 +1,25 @@
 import React from 'react';
-import './Poegram.css';
+import PropTypes from 'prop-types';
+import styles from './Poegram.css';
 
-export const Poegram = (poegram) => {
+export const Poegram = ({ poegram }) => {
 
   const divStyle = {
     backgroundImage: `radial-gradient(circle at top right, ${poegram.colors[0]}, ${poegram.colors[1]})`
   };
 
   return (
-    <div className="poegram background-1" style={ divStyle }>
-      <p className="poem">{ poegram.poemId.lines }</p>
-      <p className="author">— { poegram.poemId.author }, from <em>{ poegram.poemId.title }</em></p>
-    </div>
+    <>
+      <div className={`${styles.poegram} ${styles.background1}`} style={ divStyle }>
+        <p className={styles.poem}>{ poegram.poemId.lines }</p>
+        <p className={styles.author}>— { poegram.poemId.author }, from <em>{ poegram.poemId.title }</em></p>
+      </div>
+    </>
   );
+};
+
+Poegram.propTypes = {
+  poegram: PropTypes.object.isRequired
 };
 
 export default Poegram;

@@ -1,12 +1,13 @@
-import { GET_RANDOM } from '../actions/poegramActions';
+import { SET_POEGRAMS } from '../actions/poegramActions';
 
 const initialState = [];
 
 export default function reducer(state = initialState, action) {
   switch(action.type) {
-    case GET_RANDOM:
-      return state;
+    case SET_POEGRAMS:
+      return action.payload;
     
     default: return state;
   }
 }
+
