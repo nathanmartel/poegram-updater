@@ -1,18 +1,14 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { setPoegrams } from '../../actions/poegramActions';
+import { fetchResponse } from '../../services/services';
 
 const LoadButton = () => {
 
   const dispatch = useDispatch();
 
   const handleFetchRandomPoegram = () => {
-    fetch('http://poegram.herokuapp.com/api/v1/poegrams/random')
-      .then(res => { 
-        if(!res.ok) throw Error(res.statusText);
-        else return res;
-      })
-      .then(res => res.json())
+    fetchResponse()
       // Make sure response is in array form
       .then(json => Array.isArray(json) 
         ? dispatch(setPoegrams(json)) 
